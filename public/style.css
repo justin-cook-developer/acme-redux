@@ -24,11 +24,12 @@ form {
   height: 200px;
 }
 
-input,button {
+input,
+button {
   height: 3em;
 }
 
-div#content{
+div#content {
   margin-top: 3em;
 }
 
@@ -39,6 +40,6 @@ div#content{
   padding: 1em;
 }
 
-#products li div{
+#products li div {
   flex: 1;
 }

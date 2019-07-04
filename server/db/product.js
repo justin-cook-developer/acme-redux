@@ -1,16 +1,19 @@
-const Sequelize = require('sequelize')
-const { connection, Model } = require('./connection')
+const Sequelize = require('sequelize');
+const { connection, Model } = require('./connection');
 
 class Product extends Model {}
-Product.init({
+Product.init(
+  {
     name: {
-        type: Sequelize.STRING,
-        unique: true,
-        allowNull: false,
-        validate: {
-            notEmpty: true,
-        }
-    }
-}, { sequelize: connection, modelName: 'product' })
+      type: Sequelize.STRING,
+      unique: true,
+      allowNull: false,
+      validate: {
+        notEmpty: true,
+      },
+    },
+  },
+  { sequelize: connection, modelName: 'product' }
+);
 
-module.exports = Product
+module.exports = Product;
